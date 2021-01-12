@@ -1,0 +1,103 @@
+<!Doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+
+
+    <title>AMC</title>
+
+    <!-- style -->
+    <style type="text/css">
+
+        * {
+            font-family: 'Gugi', cursive;
+            margin: 10px auto;
+            width:300px;
+            height:60px;
+        }
+
+        .wrap {
+            height: 100%;
+            text-align: center;
+        }
+
+        .wrap::before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 100%;
+            margin-right: 0;
+            vertical-align: middle;
+        }
+
+        .navbar navbar-light bg-light {
+            color: white;
+            width: 300px;
+            height: 200px;
+
+            border-radius: 10px;
+            text-align: center;
+            margin-left:auto;
+            margin-right: auto;
+            padding: 100px 0px;
+        }
+
+        .box {
+            display: inline-block;
+            width:300px;
+            height:300px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+
+function Citation(){
+    $.ajax({
+        type: "GET",
+        url: `/book?search=${input_data}`
+        // url : `/book?search=${input_data}`
+        // url : '/book?search='+input_data
+        // let input_data = '$('#id').val()
+        data: {},
+        success: function (response) {
+            }
+            }
+    })
+}
+
+
+    </script>
+
+</head>
+
+<body>
+<div class="wrap">
+    <div class="box">
+        <h1 class="display-4">AMC</h1>
+        <p class="lead">Auto Making Citation</p>
+
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+                <input class="Citation" type="search" placeholder="Enter the tiltle of Book" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+</div>
+</body>
+
+</html>

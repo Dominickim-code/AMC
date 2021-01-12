@@ -36,15 +36,20 @@ from scholarly import scholarly
 # 프린트 해오는 결과값 바로 나올 수 있게 만들어 보기
 # 그다음에 index.html
 # 하면 바로 github에 리포지토리
-search_query = scholarly.search_pubs('Perception of physical stability and center of mass of 3D objects')
-scholarly.pprint(next(search_query))
+# search_query = scholarly.search_pubs('Perception of physical stability and center of mass of 3D objects')
+# scholarly.pprint(next(search_query))
 # 변수 만들기
 # 나홀로 메모장- 화면에 있는 url jquery로 가져와서 app.py에 넘겨주는 방식
 # get = request
 # 나홀로 메모장 api 문서 만들어 보기
 
-
+# search_query = scholarly.search_pubs("")
+# scholarly.pprint(next(search_query))
 # print([citation['bib']['title'] for citation in scholarly.citedby(pub)])
 # from scholarly import scholarly
 # import pprinter
+
+search_query = scholarly.search_author('Steven A. Cholewiak')
+author = next(search_query).fill("")
+print(author)
 # print(next(scholarly.search_author('Steven A. Cholewiak')))
