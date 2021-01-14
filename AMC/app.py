@@ -15,8 +15,8 @@ def get_citation():
     raw_citation_info = scholarly.search_pubs(keyword_receive.replace("'",""))
     citation_info = next(raw_citation_info)
     # scholarly.pprint(citation_info)
-    testData = scholarly.pprint(citation_info)
-    return render_template('index.html', testDataHtml=testData)
+    myResult = scholarly.pprint(citation_info)
+    return render_template('index.html', webResult=myResult)
     # return jsonify({'result': 'success', 'citation': 'temp','name': '','affiliation': '', })
 
 if __name__ == '__main__':
